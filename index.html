@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lugares Turísticos Jipijapa 🗺</title>
+    <link rel="icon" href="img/icono-carro.png" type="image/png" />
+
+    <link rel="stylesheet" href="style/Estilo.css" />
+
+    <script src="js/Scrips.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2dK8LPZnzeqz89W1yf7Ds1tfpEb7PPMY&callback=initMap"
+        async defer></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="img/bandera.png" alt="Logo de la página" />
+            <h1>Visita Jipijapa ✈ </h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li class="submenu-parent">
+                    <a href="#">Información</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="https://www.jipijapa.gob.ec/" target="_blank">Municipio de Jipijapa</a>
+                        </li>
+                        <li>
+                            <a href="https://www.goraymi.com/es-ec/manabi/jipijapa/ciudades/jipijapa-a86b83cf3"
+                                target="_blank">Descubre más de Jipijapa</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="link" target="_blank" title="Preguntas sobre Jipijapa">Preguntas</a>
+                </li>
+
+                <li class="submenu-parent">
+                    <a href="https://www.google.com/search?sca_esv=f81aa4b0e2de3d67&q=fotos+de+jipijapa&udm=2&fbs=AIIjpHx4nJjfGojPVHhEACUHPiMQht6_BFq6vBIoFFRK7qchKHDX9TtpZ992kyQpCWcw0WhoqqkQpEwIiVZWE9GXTg9wegQFhEhqIdt4b1MjrVfrnL3IWEtZ579vr8anTgUWqbviSZzYWaBlflSalUTFOaXSuC1KNlh5zPz_IoYmvlhquPU4i29LbOdPo_42CAYTuFND5MJqao99Zmiu9GCgEKyG2KyB4g&sa=X&ved=2ahUKEwjc-bWAsLqOAxVPSDABHW1EDVgQtKgLKAF6BAgREAE&biw=1536&bih=695&dpr=1.25"
+                        title="Fotos de Jipijapa" target="_blank">Fotos</a>
+                </li>
+                <li>
+                    <a href="#final" title="Ir al final de la página" class="fa-solid fa-circle-arrow-down"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="bienvenida">
+            <div class="text-container">
+                <p id="bnv-titulo">
+                    ¡Bienvenidos a Jipijapa - Manabí - Ecuador! 👋
+                </p>
+                <p id="text-bienvenida">
+                    Es conocido como la "Sultana del Café" por su tradición, Jipijapa es un cantón que mantiene
+                    arraigados los
+                    aspectos culturales, históricos y folclóricos que lo identifican a nivel nacional.
+                    Es un turismo que es manejado por la comunidad para compartir sus patrimonios naturales y
+                    culturando,
+                    preservando el medio ambiente, revalorizando la identidad cultural. Las comunidades proponen
+                    diversidades de
+                    actividades turísticas, alojamientos y alimentación, senderos de observación de aves y de flora,
+                    sitios
+                    arqueológicos de la cultura manteña como los Petroglifos, participación a eventos culturales, visita
+                    de fincas
+                    agroecológicas, etc.
+                    <br />
+                </p>
+            </div>
+            <div class="video-container">
+                <video id="video-pl2" width="160" height="285" muted loop autoplay>
+                    <source src="videos/video-jipijapa.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </section>
+
+        <section id="cuadros-info">
+            <div class="title-cuadro-info">
+                <p id="titulo-info">Descubre las maravillas de Jipijapa</p>
+            </div>
+            <ul class="cuadros">
+                <li class="cuadros_item">
+                    <div class="cuadro">
+                        <div class="cuadro_image">
+                            <img src="img/jipi.jpeg" alt="Iglesia de San Lorenzo Mártir" />
+                        </div>
+                        <div class="cuadro_content">
+                            <h2 class="cuadro_title">Iglesia de San Lorenzo Mártir </h2>
+                            <p class="cuadro_text">
+                                Admira la imponente Iglesia de San Lorenzo Mártir, un emblema arquitectónico y
+                                espiritual de Jipijapa.
+                                Su diseño y belleza la convierten en un punto de referencia y visita obligada en el
+                                corazón de la ciudad.
+                                Un lugar donde la fe y la historia se entrelazan.
+                            </p>
+                            <a href="/subpaginas/pag2-iglesia.html" class="btn">🔎 Leer Más</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="cuadros_item">
+                    <div class="cuadro">
+                        <div class="cuadro_image">
+                            <img src="img/agua dulce.webp" alt="Laguna de Agua Dulce" />
+                        </div>
+                        <div class="cuadro_content">
+                            <h2 class="cuadro_title">¡Explora la Laguna de Agua Dulce!</h2>
+                            <p class="cuadro_text">
+                                Sumérgete en la serenidad de la Laguna de Agua Dulce, un oasis natural en Jipijapa.
+                                Ideal para paseos en
+                                bote, observar aves locales y disfrutar de un día de campo en familia. Un remanso de paz
+                                para conectar
+                                con la naturaleza y escapar del bullicio.
+                            </p>
+                            <a href="/subpaginas/pag3-cascada.html" class="btn">🔎 Leer Más</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="cuadros_item">
+                    <div class="cuadro">
+                        <div class="cuadro_image">
+                            <img src="img/ceviche.webp" alt="Gastronomía Jipijapense" />
+                        </div>
+                        <div class="cuadro_content">
+                            <h2 class="cuadro_title">
+                                Descubre la Magia de la Gastronomía Jipijapense
+                            </h2>
+                            <p class="cuadro_text">
+                                Deléitate con los sabores auténticos de Jipijapa. Prueba el tradicional seco de chivo,
+                                los crujientes
+                                corviches, el suave pan de almidón y otras delicias que reflejan la riqueza agrícola y
+                                cultural de
+                                nuestra tierra. Una explosión de sabores que conquistará tu paladar.
+                            </p>
+                            <a href="/subpaginas/pag4-gatronomia.html" class="btn">🔎 Leer Más</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="cuadros_item">
+                    <div class="cuadro">
+                        <div class="cuadro_image">
+                            <img src="img/cultura.jpg" alt="Cultura y Tradiciones de Jipijapa" />
+                        </div>
+                        <div class="cuadro_content">
+                            <h2 class="cuadro_title">
+                                Conoce su Cultura y Tradiciones
+                            </h2>
+                            <p class="cuadro_text">
+                                Sumérgete en la vibrante cultura montubia de Jipijapa. Descubre sus arraigadas
+                                tradiciones, su música
+                                (el amorfino), sus bailes y la calidez de su gente. Participa en festividades locales y
+                                vive de cerca el
+                                auténtico espíritu del campo manabita. Una experiencia cultural que te conectará con la
+                                esencia de
+                                nuestra tierra.
+                            </p>
+                            <a href="/subpaginas/pag5-cultura.html" class="btn">🔎 Leer Más</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="cuadros_item">
+                    <div class="cuadro">
+                        <div class="cuadro_image">
+                            <img src="img/artesanias.jpg" alt="Artesanía y Productos Locales" />
+                        </div>
+                        <div class="cuadro_content">
+                            <h2 class="cuadro_title">
+                                Artesanía y Productos Locales
+                            </h2>
+                            <p class="cuadro_text">
+                                Descubre la autenticidad de la artesanía y los productos locales de Jipijapa. Más allá
+                                del sombrero de
+                                paja toquilla, encontrarás piezas únicas de alfarería, cestería y dulces tradicionales.
+                                Apoya a nuestros
+                                productores y llévate un pedazo de la esencia de Jipijapa a casa.
+                            </p>
+                            <a href="/subpaginas/pag6-artesanias.html" class="btn">🔎 Leer Más</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="cuadros_item">
+                    <div class="cuadro">
+                        <div class="cuadro_image">
+                            <img src="img/senderismo.webp" alt="Circuitos Turísticos y Aventuras" />
+                        </div>
+                        <div class="cuadro_content">
+                            <h2 class="cuadro_title">
+                                Circuitos Turísticos y Aventuras
+                            </h2>
+                            <p class="cuadro_text">
+                                Explora Jipijapa a través de nuestros circuitos turísticos diseñados para cada tipo de
+                                viajero. Desde
+                                rutas de café y agroturismo, hasta senderismo por parajes naturales y visitas a
+                                comunidades rurales.
+                                ¡Prepárate para la aventura y vive experiencias inolvidables en el corazón de Manabí!
+                            </p>
+                            <a href="/subpaginas/pag7-senderismo.html" class="btn">🔎 Leer Más</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="">
+            <section class="section-planifica-senderismo-v5">
+                <div class="container-senderismo-v5">
+                    <h2>Explora tu proxima visita</h2>
+                    <div class="planifica-content-v5">
+                        <div class="planifica-info-v5">
+                            <p>
+
+                                Para una experiencia segura y gratificante, te recomendamos revisar el mapa estamos
+                                emocionados de recibirte en Jipijapa. Encuentranos fácilmente en el vibrante corazón de
+                                Manabí, donde te esperamos para brindarte la mejor experiencia. ¡Ven a conocernos
+                                pronto!</p>
+                        </div>
+                        <div class="planifica-map-v5">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15949.191834947935!2d-80.57530665!3d-1.34589995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902b115b8d0b2f51%3A0x2a19c5c7d0d0c3c!2sJipijapa%2C%20Manab%C3%AD%2C%20Ecuador!5e0!3m2!1ses!2sus!4v1703279000000!5m2!1ses!2sus"
+                                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+    </main>
+    <footer>
+        <div class="iconos-redes">
+            <a href="Link" target="_blank"
+                title="Jipijapa en Facebook" class="fa-brands fa-facebook"></a>
+            <a href="Link" target="_blank"
+                title="Jipijapa en X (Twitter)" class="fa-brands fa-twitter"></a>
+            <a href="Link" target="_blank"
+                title="Videos de Jipijapa en TikTok" class="fa-brands fa-tiktok"></a>
+            <a href="Link" target="_blank"
+                title="Videos de Jipijapa en YouTube" class="fa-brands fa-youtube"></a>
+            <a href="Link/" target="_blank"
+                title="Fotos de Jipijapa en Instagram" class="fa-brands fa-instagram"></a>
+            <a href="#" title="Ir al inicio de la pagina" class="fa-solid fa-circle-arrow-up"></a>
+        </div>
+        <div class="msj-Copyright">
+            Diseño By: Juliana Bedoya, Moises Figueroa, Monica Plúa, Jamileth Zambrano
+            <br />© 2025. Todos los derechos reservados.
+        </div>
+        <div id="final"></div>
+    </footer>
+    <script>
+        (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "hX6GYydZyNiYjz8sMuZMK"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+    </script>
+</body>
+
+</html>
