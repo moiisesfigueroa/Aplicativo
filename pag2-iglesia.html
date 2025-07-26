@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iglesia de San Lorenzo Mártir - Jipijapa</title>
+    <link rel="icon" href="/img/icono-carro.png" type="image/png" />
+    <link rel="stylesheet" href="/style/Estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" />
+
+    <style>
+
+        .detalle-main {
+            max-width: 900px;
+            /* Ancho moderado */
+            margin: 30px auto;
+            padding: 30px;
+            background-color: #fff;
+            /* Fondo blanco, como suele ser en tu sitio */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            /* Sombra sutil */
+            border-radius: 8px;
+            /* Bordes ligeramente redondeados */
+            line-height: 1.6;
+            color: #333;
+            /* Color de texto general */
+        }
+
+        .detalle-titulo {
+            font-family: inherit;
+            /* Hereda la fuente de tu CSS principal */
+            font-size: 2.5em;
+            /* Tamaño de título adecuado */
+            font-weight: bold;
+            color: #333;
+            /* Un color oscuro para el título */
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            /* Separador sutil */
+        }
+
+        .detalle-imagen-principal {
+            width: 100%;
+            max-height: 450px;
+            overflow: hidden;
+            border-radius: 8px;
+            /* Redondez para la imagen principal */
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .detalle-imagen-principal img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .detalle-texto-introduccion {
+            font-family: inherit;
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #555;
+            text-align: justify;
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            /* Un fondo muy ligero para la intro */
+            border-left: 4px solid #6c757d;
+            /* Un color neutro o de tu paleta */
+            border-radius: 5px;
+        }
+
+        .detalle-contenido p strong {
+            color: #333;
+            /* Mantener la consistencia con el texto general o un color de énfasis sutil */
+            font-weight: bold;
+        }
+
+        .detalle-seccion {
+            margin-bottom: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .detalle-subtitulo {
+            font-family: inherit;
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: left;
+            padding-bottom: 8px;
+        }
+
+        .detalle-seccion p {
+            font-family: inherit;
+            font-size: 1em;
+            line-height: 1.7;
+            color: #555;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .detalle-imagen-secundaria {
+            width: 80%;
+            max-height: 300px;
+            display: block;
+            margin: 25px auto;
+            border-radius: 6px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+
+        /* GALERÍA DE IMÁGENES */
+        .detalle-galeria-imagenes {
+            margin-bottom: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .detalle-subtitulo-galeria {
+            font-family: inherit;
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 25px;
+            text-align: center;
+            padding-bottom: 8px;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 10px;
+            background-color: #fcfcfc;
+            border-radius: 8px;
+        }
+
+        .galeria-grid img {
+            width: 100%;
+            height: 180px;
+            /* Altura fija */
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .galeria-grid img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* SECCIÓN DE DATOS CLAVE */
+        .detalle-datos-clave {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            padding: 25px;
+            background-color: #f0f0f0;
+            /* Un color de fondo más neutro */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .detalle-datos-clave .detalle-subtitulo {
+            color: #333;
+            text-align: center;
+            border-bottom: none;
+            margin-bottom: 15px;
+            font-size: 1.6em;
+        }
+
+        .detalle-datos-clave ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .detalle-datos-clave ul li {
+            font-family: inherit;
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            color: #555;
+        }
+
+        .detalle-datos-clave ul li i {
+            color: #6c757d;
+            /* Un color de ícono que combine bien */
+            font-size: 1.1em;
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .detalle-datos-clave ul li strong {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .detalle-datos-clave ul ul {
+            margin-top: 5px;
+            margin-left: 30px;
+        }
+
+        .detalle-datos-clave ul ul li {
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin-bottom: 5px;
+            padding-left: 0;
+        }
+
+        .detalle-datos-clave ul ul li::before {
+            content: none;
+        }
+
+        /* Botón Volver a Inicio */
+        .btn.volver-btn {
+            display: block;
+            width: 200px;
+            margin: 50px auto 20px auto;
+            text-align: center;
+            background-color: #333;
+            /* El color de tu header, para consistencia */
+            color: white;
+            padding: 12px 25px;
+            font-size: 1em;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn.volver-btn:hover {
+            background-color: #555;
+            /* Un tono más claro al pasar el ratón */
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design para páginas de detalle */
+        @media (max-width: 768px) {
+            .detalle-main {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .detalle-titulo {
+                font-size: 2em;
+                margin-bottom: 25px;
+            }
+
+            .detalle-subtitulo,
+            .detalle-subtitulo-galeria {
+                font-size: 1.6em;
+                margin-bottom: 15px;
+            }
+
+            .detalle-texto-introduccion {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            .detalle-imagen-principal {
+                max-height: 300px;
+                margin-bottom: 25px;
+            }
+
+            .galeria-grid {
+                grid-template-columns: 1fr;
+                /* Una columna en móviles */
+                gap: 10px;
+            }
+
+            .galeria-grid img {
+                height: 220px;
+            }
+
+            .detalle-datos-clave {
+                padding: 18px;
+            }
+
+            .detalle-datos-clave ul li {
+                font-size: 0.95em;
+            }
+
+            .btn.volver-btn {
+                width: 180px;
+                padding: 10px 20px;
+                font-size: 0.95em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .detalle-main {
+                padding: 15px;
+                margin: 10px;
+                box-shadow: none;
+                /* Sin sombra en pantallas muy pequeñas */
+                border-radius: 0;
+            }
+
+            .detalle-titulo {
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+
+            .detalle-subtitulo,
+            .detalle-subtitulo-galeria {
+                font-size: 1.4em;
+                margin-bottom: 10px;
+            }
+
+            .detalle-texto-introduccion {
+                font-size: 0.9em;
+                padding: 12px;
+                border-left-width: 3px;
+            }
+
+            .detalle-imagen-principal {
+                max-height: 250px;
+            }
+
+            .galeria-grid img {
+                height: 180px;
+            }
+
+            .detalle-datos-clave {
+                padding: 15px;
+            }
+
+            .detalle-datos-clave ul li {
+                font-size: 0.9em;
+                margin-bottom: 8px;
+            }
+
+            .detalle-datos-clave ul li i {
+                font-size: 1em;
+                margin-right: 8px;
+            }
+
+            .btn.volver-btn {
+                width: 160px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="/img/bandera.png" alt="Logo de la página" />
+            <h1>Visita Jipijapa ✈ </h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li class="submenu-parent">
+                    <a href="#">Información</a>
+                    <ul class="submenu">
+                        <li><a href="https://www.jipijapa.gob.ec/" target="_blank">Municipio de Jipijapa</a></li>
+                        <li><a href="https://www.goraymi.com/es-ec/manabi/jipijapa/ciudades/jipijapa-a86b83cf3"
+                                target="_blank">Descubre más de Jipijapa</a></li>
+                    </ul>
+                </li>
+                <li><a href="ENLACE DEL CAHT BOT" target="_blank" title="Preguntas sobre Jipijapa">Preguntas</a>
+                </li>
+                <li class="submenu-parent">
+                    <a href="https://www.google.com/search?sca_esv=f81aa4b0e2de3d67&q=fotos+de+jipijapa&udm=2&fbs=AIIjpHx4nJjfGojPVHhEACUHPiMQht6_BFq6vBIoFFRK7qchKHDX9TtpZ992kyQpCWcw0WhoqqkQpEwIiVZWE9GXTg9wegQFhEhqIdt4b1MjrVfrnL3IWEtZ579vr8anTgUWqbviSZzYWaBlflSalUTFOaXSuC1KNlh5zPz_IoYmvlhquPU4i29LbOdPo_42CAYTuFND5MJqao99Zmiu9GCgEKyG2KyB4g&sa=X&ved=2ahUKEwjc-bWAsLqOAxVPSDABHW1EDVgQtKgLKAF6BAgREAE&biw=1536&bih=695&dpr=1.25"
+                        title="Fotos de Jipijapa" target="_blank">Fotos</a>
+                </li>
+                <li><a href="/subpaginas/pag2-iglesia.html#final2" title="Ir al final de la página"
+                        class="fa-solid fa-circle-arrow-down"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="detalle-main">
+        <section class="detalle-contenido">
+            <h1 class="detalle-titulo">Iglesia de San Lorenzo Mártir</h1>
+            <div class="detalle-imagen-principal">
+                <img src="/img/iglesia1.jpeg" alt="Iglesia de San Lorenzo Mártir, fachada principal con cúpula y torre."
+                    loading="lazy">
+            </div>
+            <p class="detalle-texto-introduccion">
+                La Iglesia de San Lorenzo Mártir es un <strong>imponente símbolo de fe y arquitectura</strong> en
+                Jipijapa. Su majestuosa presencia se alza en el centro de la ciudad, invitando a propios y extraños a
+                admirar su belleza y a sumergirse en su rica historia espiritual. Es un <strong>testimonio viviente de
+                    la devoción y el legado cultural</strong> de la región, un punto de encuentro para la comunidad y un
+                faro para los visitantes.
+            </p>
+
+            <div class="detalle-galeria-imagenes">
+                <h2 class="detalle-subtitulo-galeria">Galería de Imágenes</h2>
+                <div class="galeria-grid">
+                    <img src="/img/iglesia-dentro.jpg"
+                        alt="Interior de la Iglesia de San Lorenzo Mártir, con altares y bancos." loading="lazy">
+                    <img src="/img/iglesia2.jpg" alt="Detalle arquitectónico de la fachada de la Iglesia."
+                        loading="lazy">
+                    <img src="/img/iglesia-noche.jpg" alt="Iglesia de San Lorenzo Mártir iluminada por la noche."
+                        loading="lazy">
+                </div>
+            </div>
+
+            <div class="detalle-seccion">
+                <h2 class="detalle-subtitulo">Historia y Tradición Centenaria</h2>
+                <p>
+                    Construida a <strong>principios del siglo XX</strong>, esta iglesia ha sido un pilar fundamental en
+                    la vida de Jipijapa. Su estilo arquitectónico, que combina elementos <strong>neoclásicos con
+                        detalles locales</strong>, es un reflejo de la evolución de la ciudad. El interior alberga
+                    altares ornamentados, vitrales vibrantes y piezas de arte sacro que narran la historia religiosa de
+                    la comunidad. Las <strong>festividades en honor a San Lorenzo Mártir</strong> son un evento anual
+                    que congrega a miles de fieles, llenando las calles de música, color y fervor inquebrantable.
+                </p>
+                <p>
+                    La iglesia no solo es un lugar de culto, sino también un <strong>punto de encuentro social y
+                        cultural</strong>, donde se celebran matrimonios, bautizos y otras ceremonias que marcan la vida
+                    de los jipijapenses. Su campanario, visible desde varios puntos de la ciudad, es un faro que guía y
+                    da la bienvenida a todos los que visitan este hermoso cantón, resonando con la historia y las voces
+                    de generaciones.
+                </p>
+            </div>
+
+            <div class="detalle-seccion">
+                <h2 class="detalle-subtitulo">Importancia Cultural y Patrimonio</h2>
+                <p>
+                    Además de su valor religioso, la Iglesia de San Lorenzo Mártir es un <strong>patrimonio cultural
+                        invaluable</strong> de Jipijapa. Ha sido cuidadosamente preservada y restaurada a lo largo de
+                    los años, manteniendo su esplendor original y su atmósfera de reverencia. Su presencia imponente en
+                    la plaza central es un recordatorio constante de la <strong>identidad y las profundas
+                        raíces</strong> de Jipijapa, sirviendo como un punto de referencia para los visitantes y un
+                    inmenso orgullo para sus habitantes. Representa la fe, la resiliencia y la belleza artística de la
+                    comunidad.
+                </p>
+            </div>
+
+            <div class="detalle-datos-clave">
+                <h2 class="detalle-subtitulo">Información Útil para tu Visita</h2>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> <strong>Ubicación:</strong>&nbsp;Centro de Jipijapa,
+                        frente al Parque Central.</li>
+                    <li><i class="fas fa-clock"></i> <strong>Horarios de Visita:</strong>&nbsp;Generalmente abierta
+                        durante el día. Se recomienda verificar los horarios de misa.</li>
+                    <li><i class="fas fa-cross"></i> <strong>Horarios de Misa:</strong>
+                        <ul>
+                            <li>Lunes a Viernes: 07:00 AM y 06:30 PM</li>
+                            <li>Sábados: 07:00 AM y 07:00 PM</li>
+                            <li>Domingos: 08:00 AM, 11:00 AM, 07:00 PM</li>
+                        </ul>
+                    </li>
+                    <li><i class="fas fa-info-circle"></i> <strong>&nbsp;Entrada:</strong> Gratuita. Se agradecen
+                        donaciones.</li>
+                    <li><i class="fas fa-camera"></i> <strong>&nbsp;Fotografía:</strong> Permitida sin flash para
+                        respetar el culto.</li>
+                </ul>
+            </div>
+
+            <a href="/index.html" class="btn volver-btn">Volver a Inicio</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="iconos-redes">
+            <a href="Link" target="_blank"
+                title="Jipijapa en Facebook" class="fa-brands fa-facebook"></a>
+            <a href="Link" target="_blank"
+                title="Jipijapa en X (Twitter)" class="fa-brands fa-twitter"></a>
+            <a href="Link" target="_blank"
+                title="Videos de Jipijapa en TikTok" class="fa-brands fa-tiktok"></a>
+            <a href="Link" target="_blank"
+                title="Videos de Jipijapa en YouTube" class="fa-brands fa-youtube"></a>
+            <a href="Link/" target="_blank"
+                title="Fotos de Jipijapa en Instagram" class="fa-brands fa-instagram"></a>
+            <a href="#" title="Ir al inicio de la pagina" class="fa-solid fa-circle-arrow-up"></a>
+        </div>
+        <div class="msj-Copyright">
+            Jipijapa Turisticos - Visitanos :)
+            <br />© 2025. Todos los derechos reservados.
+        </div>
+        <div id="final2"></div>
+    </footer>
+    <script>
+        (function () { if (!window.chatbase || window.chatbase("getState") !== "initialized") { window.chatbase = (...arguments) => { if (!window.chatbase.q) { window.chatbase.q = [] } window.chatbase.q.push(arguments) }; window.chatbase = new Proxy(window.chatbase, { get(target, prop) { if (prop === "q") { return target.q } return (...args) => target(prop, ...args) } }) } const onLoad = function () { const script = document.createElement("script"); script.src = "https://www.chatbase.co/embed.min.js"; script.id = "hX6GYydZyNiYjz8sMuZMK"; script.domain = "www.chatbase.co"; document.body.appendChild(script) }; if (document.readyState === "complete") { onLoad() } else { window.addEventListener("load", onLoad) } })();
+    </script>
+</body>
+
+</html>
